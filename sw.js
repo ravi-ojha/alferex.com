@@ -26,23 +26,23 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-91131bd6c921a641666f.js"
+    "url": "webpack-runtime-0dd272d11c0c0f08741b.js"
   },
   {
-    "url": "app-f030b88d8f480aae800e.js"
+    "url": "app-aea21e2847886e102b3f.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-302b2f1c7106d1597605.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "621252c881a0780be2f085fbba99bdc4"
+    "revision": "a56ef821c053ef9c0201664d3ecd556f"
   },
   {
     "url": "0.48565c710fdc99cc2d9d.css"
   },
   {
-    "url": "1.9ac2321c90381f3a5bd2.css"
+    "url": "1.d2cdb0ccf6e65f3245c9.css"
   },
   {
     "url": "1-6aceacde07cb00edcd7c.js"
@@ -51,7 +51,7 @@ self.__precacheManifest = [
     "url": "component---src-pages-404-js-d226ea5351b5124e1e5c.js"
   },
   {
-    "url": "0-c1a2d9e64c6a016cc594.js"
+    "url": "0-e9325e1e7137cfec4564.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json"
@@ -82,7 +82,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/alferex-com/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -151,7 +151,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/alferex-com${pathname}`
+        return `${pathname}`
       } else {
         return pathname
       }
