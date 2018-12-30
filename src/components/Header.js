@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import {
   Layout, Menu, Icon, Popover, Row, Col,
 } from 'antd';
@@ -108,13 +108,13 @@ class Header extends React.PureComponent {
           <meta property="og:url" content="http://alferex.com/" />
           <meta property="og:description" content={siteDescription} />
           <meta property="og:site_name" content={siteTitle} />
-          <meta property="og:image" content={alferex_og} />
+          <meta property="og:image" content={withPrefix("https://alferex.com/assets/alferex_og.png")} />
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="http://alferex.com/" />
           <meta name="twitter:title" content={siteTitle} />
           <meta name="twitter:description" content={siteDescription} />
-          <meta name="twitter:image" content={alferex_og} />
+          <meta name="twitter:image" content={withPrefix("https://alferex.com/assets/alferex_og.png")} />
         </Helmet>
         <Segment vertical style={{ background: '#ffffff' }}>
           <Container>
