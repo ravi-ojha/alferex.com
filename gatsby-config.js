@@ -5,7 +5,7 @@ module.exports = {
     description: 'We are an industrial technology company that manufactures heavy-duty military grade machinery equipments of unmatched precision and accuracy.',
     siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
   },
-  pathPrefix: '/alferex-com',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
