@@ -1,0 +1,70 @@
+body {
+  background: #fff;
+}
+
+.ant-carousel .slick-dots li button {
+  background: rgba(81, 115, 132, 0.40) !important;
+}
+.ant-carousel .slick-dots li.slick-active button {
+  background: rgba(81, 115, 132, 0.50) !important;
+}
+
+.ant-card-bordered {
+  border: none !important;
+}
+
+.footer-container {
+  font-size: 11px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+
+.about-header {
+  padding: 0 2em;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-header {
+    padding: 0;
+  }
+}
+
+.alferex-slant-background {
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: skewY(-14deg);
+  background: rgba(81, 115, 132, 0.05);
+}
+
+.freebirdFormviewerViewFooterEmbeddedBackground {
+  display: none;
+}
+
+.alferex-header {
+  font-weight: 700;
+  font-size: 2em;
+  color: #517384 !important;
+}
+
+.alferex-dark-header {
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff !important;
+}
+
+.alferex-header::after, .alferex-dark-header::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #bfa161;
+  margin-top: 16px;
+  text-align: center;
+  margin: auto;
+}

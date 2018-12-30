@@ -1,15 +1,49 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
+import get from 'lodash/get';
+import {
+  Layout, Row, Col,
+} from 'antd';
+import { Segment, Header } from 'semantic-ui-react';
 
-class NotFoundPage extends React.Component {
+import SiteHeader from '../components/Header';
+import Footer from '../components/Footer';
+import '../../semantic/semantic-dist/semantic.css';
+import '../assets/custom.css';
+
+class NotFoundPage extends React.PureComponent {
   render() {
+    console.log(this.props);
+    const headerProps = {
+      ...this.props,
+    };
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const pageDescription = 'We manufacture & export V-Belt Pulley, Timing Toothed Belt Pulley, Motor Shaft, Crank Shaft and similar machinery parts';
+
     return (
-      <Layout location={this.props.location}>
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
-    )
+      <div>
+        <Helmet
+          htmlAttributes={{ lang: 'en' }}
+          meta={[{ name: 'description', content: pageDescription }]}
+          title={`${siteTitle}`}
+        />
+        <SiteHeader {...headerProps} />
+        <Segment basic style={{ marginBottom: '0' }}>
+        </Segment>
+        <Segment basic>
+          <Header as="h2">
+            Oops! You have found a dead link
+            <Header.Subheader>
+              Please go back to
+              <Link to="/"> home</Link>
+            </Header.Subheader>
+          </Header>
+        </Segment>
+        <Footer />
+      </div>
+    );
   }
 }
 
-export default NotFoundPage
+export default NotFoundPage;

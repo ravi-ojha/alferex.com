@@ -38,6 +38,22 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: 'gatsby-plugin-import',
+            options: {
+              libraryName: "antd",
+              style: true,   // or 'css'
+            }
+          },
+          {
+            resolve: `gatsby-plugin-less`,
+            options: {
+              modifyVars: {
+                'body-background': 'rgba(81, 115, 132, 0.05)',
+              },
+              javascriptEnabled: true,
+            },
+          },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -59,19 +75,13 @@ module.exports = {
         name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `rgba(81, 115, 132, 0.05)`,
+        theme_color: `#517384`,
         display: `minimal-ui`,
         icon: `src/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
+    `gatsby-plugin-react-helmet`
   ],
 }

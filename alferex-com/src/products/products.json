@@ -7,12 +7,12 @@
         "type": "V-Belt",
         "product": "Pulley",
         "images": [
-            "src/assets/pulleys/v-belt-pulley/01-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "src/assets/pulleys/v-belt-pulley/02-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "src/assets/pulleys/v-belt-pulley/03-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "src/assets/pulleys/v-belt-pulley/04-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "src/assets/pulleys/v-belt-pulley/05-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "src/assets/pulleys/v-belt-pulley/06-steel-aluminum-cast-iron-v-belt-pulley.jpg"
+            "assets/pulleys/v-belt-pulley/01-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "assets/pulleys/v-belt-pulley/02-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "assets/pulleys/v-belt-pulley/03-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "assets/pulleys/v-belt-pulley/04-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "assets/pulleys/v-belt-pulley/05-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "assets/pulleys/v-belt-pulley/06-steel-aluminum-cast-iron-v-belt-pulley.jpg"
         ]
     },
     {
@@ -23,10 +23,10 @@
         "type": "Timing Toothed Belt",
         "product": "Pulley",
         "images": [
-            "src/assets/pulleys/timing-toothed-belt-pulley/01-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "src/assets/pulleys/timing-toothed-belt-pulley/02-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "src/assets/pulleys/timing-toothed-belt-pulley/03-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "src/assets/pulleys/timing-toothed-belt-pulley/04-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg"
+            "assets/pulleys/timing-toothed-belt-pulley/01-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "assets/pulleys/timing-toothed-belt-pulley/02-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "assets/pulleys/timing-toothed-belt-pulley/03-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "assets/pulleys/timing-toothed-belt-pulley/04-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg"
         ]
     },
     {
@@ -37,9 +37,9 @@
         "type": "Motor",
         "product": "Shaft",
         "images": [
-            "src/assets/shafts/motor-shaft/01-alloy-steel-motor-shaft.png",
-            "src/assets/shafts/motor-shaft/02-alloy-steel-motor-shaft.png",
-            "src/assets/shafts/motor-shaft/03-alloy-steel-motor-shaft.png"
+            "assets/shafts/motor-shaft/01-alloy-steel-motor-shaft.png",
+            "assets/shafts/motor-shaft/02-alloy-steel-motor-shaft.jpg",
+            "assets/shafts/motor-shaft/03-alloy-steel-motor-shaft.jpg"
         ]
     }
 ]
