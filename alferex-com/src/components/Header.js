@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 import { Link } from 'gatsby';
 import {
@@ -11,6 +12,8 @@ import {
 } from 'semantic-ui-react';
 
 import logo from '../assets/alferex_logo_colored_on_transparent_bg.svg';
+import alferex_og from '../assets/alferex_og.png';
+import favicon from '../assets/favicon.ico';
 import { enquireScreen } from '../utils/common';
 
 class Header extends React.PureComponent {
@@ -90,8 +93,29 @@ class Header extends React.PureComponent {
         </Menu.Item>
       </Menu>
     );
+    const siteTitle = 'Alferex Industries Private Limited';
+    const siteDescription = 'We are an industrial technology company that manufactures heavy-duty military grade machinery equipments of unmatched precision and accuracy';
+
     return (
       <Layout style={{ boxShadow: '0px 0px 30px 0px rgba(0, 0, 0, 0.10)', background: '#ffffff', padding: '0', marginBottom: '1em' }}>
+        <Helmet
+          htmlAttributes={{ lang: 'en' }}
+          meta={[{ name: 'description', content: siteDescription }]}
+          title={`${siteTitle}`}
+          link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}>
+          <meta property="og:title" content={siteTitle} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="http://alferex.com/" />
+          <meta property="og:description" content={siteDescription} />
+          <meta property="og:site_name" content={siteTitle} />
+          <meta property="og:image" content={alferex_og} />
+
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:url" content="http://alferex.com/" />
+          <meta name="twitter:title" content={siteTitle} />
+          <meta name="twitter:description" content={siteDescription} />
+          <meta name="twitter:image" content={alferex_og} />
+        </Helmet>
         <Segment vertical style={{ background: '#ffffff' }}>
           <Container>
             {menuMode === 'inline' ? (

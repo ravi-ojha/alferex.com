@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 
-import get from 'lodash/get';
 import { Segment, Container, Header, Grid } from 'semantic-ui-react';
 import AboutAlferex from '../components/AboutAlferex';
 import ContactDetails from '../components/ContactDetails';
@@ -15,19 +12,11 @@ import '../assets/custom.css';
 
 class Index extends React.PureComponent {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    );
+    console.log(this.props);
+    
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${siteTitle}`}
-        />
         <SiteHeader {...this.props} />
         <Segment basic>
           <Container>
@@ -40,7 +29,7 @@ class Index extends React.PureComponent {
           </Container>
         </Segment>
         <div style={{ position: 'relative' }}>
-          <svg style={{ position: 'absolute', width: '100%', height: '100%' }} width="1665px" height="665px" viewBox="0 0 1665 665" preserveAspectRatio="none"><defs><linearGradient x1="-9.76013358%" y1="100%" x2="93.4135454%" y2="47.0457337%" id="linearGradient-1"><stop stop-color="#517384" offset="0%"></stop><stop stop-color="#517384" offset="100%"></stop></linearGradient></defs><polygon fill="#f6f8f9" transform="translate(832.500000, 274.000000) scale(1, -1) translate(-832.500000, -274.000000) " points="0 3 1665 3 1665 346.491263 117.611298 545 0 475.825616"></polygon><polygon fill="url(#linearGradient-1)" points="0 124.293036 1665 0 1665 561.957836 1550.97584 665 0 601.957836"></polygon></svg>
+          <svg style={{ position: 'absolute', width: '100%', height: '100%' }} width="1665px" height="665px" viewBox="0 0 1665 665" preserveAspectRatio="none"><defs><linearGradient x1="-9.76013358%" y1="100%" x2="93.4135454%" y2="47.0457337%" id="linearGradient-1"><stop stopColor="#517384" offset="0%"></stop><stop stopColor="#517384" offset="100%"></stop></linearGradient></defs><polygon fill="#f6f8f9" transform="translate(832.500000, 274.000000) scale(1, -1) translate(-832.500000, -274.000000) " points="0 3 1665 3 1665 346.491263 117.611298 545 0 475.825616"></polygon><polygon fill="url(#linearGradient-1)" points="0 124.293036 1665 0 1665 561.957836 1550.97584 665 0 601.957836"></polygon></svg>
           <Segment basic style={{ padding: '10em 0' }}>
             <Container>
               <Header as="h1" textAlign="center" className="about-header alferex-dark-header">

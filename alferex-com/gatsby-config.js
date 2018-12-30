@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
+    title: 'Alferex Industries Private Limited',
+    author: 'Ravi Ojha',
+    description: 'We are an industrial technology company that manufactures heavy-duty military grade machinery equipments of unmatched precision and accuracy.',
     siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/alferex-com',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -49,7 +49,7 @@ module.exports = {
             resolve: `gatsby-plugin-less`,
             options: {
               modifyVars: {
-                'body-background': 'rgba(81, 115, 132, 0.05)',
+                'body-background': '#fff',
               },
               javascriptEnabled: true,
             },
@@ -65,20 +65,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-122360620-1`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Alferex Industries Private Limited`,
+        short_name: `Alferex Industries`,
         start_url: `/`,
-        background_color: `rgba(81, 115, 132, 0.05)`,
+        background_color: `#fff`,
         theme_color: `#517384`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/alferex_icon_colored_on_transparent_bg.svg`,
       },
     },
     `gatsby-plugin-offline`,

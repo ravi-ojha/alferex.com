@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 
 import get from 'lodash/get';
 import { Segment, Header, Breadcrumb, Container } from 'semantic-ui-react';
@@ -14,19 +13,9 @@ import '../assets/custom.css';
 
 class ContactUs extends React.PureComponent {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    );
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${siteTitle}`}
-        />
         <SiteHeader {...this.props} />
         <Segment basic style={{ background: '#ffffff' }}>
           <Container>

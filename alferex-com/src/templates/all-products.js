@@ -1,7 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import get from 'lodash/get';
 import {
   Card, Grid, Segment, Image, Breadcrumb, Container, Header,
 } from 'semantic-ui-react';
@@ -15,10 +13,7 @@ import '../assets/custom.css';
 class AllProductsTemplate extends React.PureComponent {
   render() {
     console.log(this.props);
-    const { location, data, pageContext } = this.props;
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    const pageTitle = 'Products';
-    const pageDescription = 'We manufacture & export V-Belt Pulley, Timing Toothed Belt Pulley, Motor Shaft, Crank Shaft and similar machinery parts';
+    const { pageContext } = this.props;
     const { previous, next } = pageContext;
 
     console.log(pageContext.allProducts);
@@ -40,11 +35,6 @@ class AllProductsTemplate extends React.PureComponent {
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: pageDescription }]}
-          title={`${pageTitle} | ${siteTitle}`}
-        />
         <SiteHeader {...this.props} />
         <Segment basic style={{ background: '#ffffff' }}>
           <Container>

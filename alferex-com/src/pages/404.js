@@ -1,10 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
-import get from 'lodash/get';
-import {
-  Layout, Row, Col,
-} from 'antd';
 import { Segment, Header } from 'semantic-ui-react';
 
 import SiteHeader from '../components/Header';
@@ -18,16 +13,8 @@ class NotFoundPage extends React.PureComponent {
     const headerProps = {
       ...this.props,
     };
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    const pageDescription = 'We manufacture & export V-Belt Pulley, Timing Toothed Belt Pulley, Motor Shaft, Crank Shaft and similar machinery parts';
-
     return (
       <div>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: pageDescription }]}
-          title={`${siteTitle}`}
-        />
         <SiteHeader {...headerProps} />
         <Segment basic style={{ marginBottom: '0' }}>
         </Segment>

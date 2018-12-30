@@ -38,12 +38,12 @@ class ProductPostTemplate extends React.PureComponent {
 
     return (
       <div>
+        <SiteHeader {...this.props} />
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${product.title} | ${siteTitle}`}
         />
-        <SiteHeader {...this.props} />
         <Segment basic style={{ background: '#ffffff' }}>
           <Container>
             <Segment basic style={{ marginBottom: '0' }}>
