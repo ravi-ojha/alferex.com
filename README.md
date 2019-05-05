@@ -9,3 +9,10 @@ Or [view the live demo here](https://gatsby-starter-blog-demo.netlify.com/).
 
 ## Running in development
 `gatsby develop`
+
+## Running in production mode on local
+`gatsby build`
+`gatsby serve`
+
+## Deploying to github pages
+`npm run deploy`
