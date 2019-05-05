@@ -89,3 +89,19 @@ body {
     width: 26%;
   }
 }
+
+/* position outside */
+.flickity-prev-next-button {
+  background: hsla(0, 0%, 90%, 0.75) !important;
+}
+
+.flickity-prev-next-button:hover {
+  background: hsla(0, 0%, 95%, 0.75) !important;
+}
+
+.flickity-prev-next-button.previous {
+  left: -50px !important;
+}
+.flickity-prev-next-button.next {
+  right: -50px !important;
+}
