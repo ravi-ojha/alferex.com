@@ -15,7 +15,6 @@ import '../assets/custom.css';
 
 class ProductPostTemplate extends React.PureComponent {
   render() {
-    console.log(this.props);
     const { location, data, pageContext } = this.props;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const product = data.productsJson;

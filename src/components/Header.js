@@ -85,6 +85,9 @@ class Header extends React.PureComponent {
         <Menu.Item key="about-us" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
           <Link to="/about-us">About Us</Link>
         </Menu.Item>
+        <Menu.Item key="clientele" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
+          <Link to="/clientele">Clientele</Link>
+        </Menu.Item>
         <Menu.Item key="contact-us" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
           <Link to="/contact-us">Contact Us</Link>
         </Menu.Item>

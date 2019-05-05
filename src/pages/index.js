@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Segment, Container, Header, Grid } from 'semantic-ui-react';
 import AboutAlferex from '../components/AboutAlferex';
+import Clientele from '../components/Clientele';
 import ContactDetails from '../components/ContactDetails';
 
 
@@ -76,6 +77,16 @@ class Index extends React.PureComponent {
             </Container>
           </Segment>
         </div>
+        <Segment basic>
+          <Container>
+            <Segment basic>
+              <Header as="h1" textAlign="center" className="about-header alferex-header">
+                Clientele
+              </Header>
+              <Clientele />
+            </Segment>
+          </Container>
+        </Segment>
         <Segment basic>
           <Container>
             <Segment basic>
