@@ -66,6 +66,8 @@ class Header extends React.PureComponent {
       activeMenuItem = 'products';
     } else if (/\/about-us/.test(path)) {
       activeMenuItem = 'about-us';
+    } else if (/\/clientele/.test(path)) {
+      activeMenuItem = 'clientele';
     } else if (/\/contact-us/.test(path)) {
       activeMenuItem = 'contact-us';
     } else if (/\/enquiry/.test(path)) {
