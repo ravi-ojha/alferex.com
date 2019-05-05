@@ -13,9 +13,6 @@ import '../assets/custom.css';
 
 class Index extends React.PureComponent {
   render() {
-    console.log(this.props);
-    
-
     return (
       <div>
         <SiteHeader {...this.props} />

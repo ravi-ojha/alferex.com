@@ -6,7 +6,7 @@
 
 import React from 'react';
 import {
-  Card, Header, Segment, Container, Image,
+  Header, Segment, Container, Image,
 } from 'semantic-ui-react';
 
 import Flickity from 'react-flickity-component'
@@ -30,6 +30,8 @@ class Clientele extends React.PureComponent { // eslint-disable-line react/prefe
             You're in great company!
           </Header>
           <Segment basic>
+          {
+            typeof window !== 'undefined' && Flickity &&
             <Flickity
               className={'carousel'} // default ''
               elementType={'div'} // default 'div'
@@ -37,14 +39,15 @@ class Clientele extends React.PureComponent { // eslint-disable-line react/prefe
               disableImagesLoaded={false} // default false
               reloadOnUpdate // default false
             >
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/adeshwar-moulds-pvt-ltd.jpg" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/ambition-industry.png" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/macons.png" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/hindustan-dorr-oliver.jpeg" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/dhara-engineering-works.jpg" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/capius.png" size="medium" /></Segment>
-              <Segment basic padded textAlign='center' style={{  height: '140px', width: '26%', margin: 0 }}><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/cadmach.jpg" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/adeshwar-moulds-pvt-ltd.jpg" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/ambition-industry.png" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/macons.png" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/hindustan-dorr-oliver.jpeg" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/dhara-engineering-works.jpg" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/capius.png" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/cadmach.jpg" size="medium" /></Segment>
             </Flickity>
+          }
           </Segment>
         </Container>
       </Segment>
