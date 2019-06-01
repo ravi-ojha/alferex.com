@@ -5,7 +5,8 @@
         "description": "V-Belt Pulley made out of cast iron GG25 is often used in combination with wedge ropes for power transmission. Together they provide a high-speed power transmission solution that is resistant to slipping and misalignment.",
         "material": "Steel Aluminium Cast Iron GG25",
         "type": "V-Belt",
-        "product": "Pulley",
+        "category": "Pulleys",
+        "categorySlug": "pulleys",
         "images": [
             "assets/pulleys/v-belt-pulley/01-steel-aluminum-cast-iron-v-belt-pulley.jpg",
             "assets/pulleys/v-belt-pulley/02-steel-aluminum-cast-iron-v-belt-pulley.jpg",
@@ -21,7 +22,8 @@
         "description": "Timing Toothed Belt Pulley made out of cast iron GG25 is often used in combination with wedge ropes for power transmission. Together they provide a high-speed power transmission solution that is resistant to slipping and misalignment.",
         "material": "Steel Aluminium Cast Iron GG25",
         "type": "Timing Toothed Belt",
-        "product": "Pulley",
+        "category": "Pulleys",
+        "categorySlug": "pulleys",
         "images": [
             "assets/pulleys/timing-toothed-belt-pulley/01-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
             "assets/pulleys/timing-toothed-belt-pulley/02-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
@@ -30,16 +32,65 @@
         ]
     },
     {
-        "title": "Motor Shaft",
-        "slug": "products/shafts/motor-shaft",
-        "description": "V-Belt Pulley made out of cast iron GG25 is often used in combination with wedge ropes for power transmission. Together they provide a high-speed power transmission solution that is resistant to slipping and misalignment.",
-        "material": "Alloy Steel",
-        "type": "Motor",
-        "product": "Shaft",
+        "title": "Multi-Groove Straight Bore Pulley",
+        "slug": "products/pulleys/multi-groove-straight-bore-pulley",
+        "description": "Multi-Groove Straight Bore Pulley made out of cast iron G3000 is often used in Oil Industry, Paper Industry, Rolling Mills, Food Industry, Sugar Industry",
+        "material": "Steel Aluminium Cast Iron G3000",
+        "type": "Straight Bore Pulley, V-Belt",
+        "category": "Pulleys",
+        "categorySlug": "pulleys",
         "images": [
-            "assets/shafts/motor-shaft/01-alloy-steel-motor-shaft.png",
-            "assets/shafts/motor-shaft/02-alloy-steel-motor-shaft.jpg",
-            "assets/shafts/motor-shaft/03-alloy-steel-motor-shaft.jpg"
+            "assets/pulleys/multi-groove-straight-bore-pulley/01-multi-groove-straight-bore-v-belt-pulley.jpg"
+        ]
+    },
+    {
+        "title": "Split Pulley",
+        "slug": "products/pulleys/split-pulley",
+        "description": "Split Pulley made out of cast iron GG25 is often used in Dal Mills, Rice Mills, Cement plants, Rolling mills",
+        "material": "Steel Aluminium Cast Iron GG25",
+        "type": "Split Pulley, V-Belt",
+        "category": "Pulleys",
+        "categorySlug": "pulleys",
+        "images": [
+            "assets/pulleys/split-v-belt-pulley/01-split-v-belt-pulley.jpg"
+        ]
+    },
+    {
+        "title": "Taper Lock Pulley",
+        "slug": "products/pulleys/taper-lock-pulley",
+        "description": "Taper Lock Pulley made out of cast iron GG25 is often used in Automation, Food Industry, Packing Machinery, Guar gam Industry, Paper Industry",
+        "material": "Steel Aluminium Cast Iron GG25",
+        "type": "Taper Lock Pulley",
+        "category": "Pulleys",
+        "categorySlug": "pulleys",
+        "images": [
+            "assets/pulleys/taper-lock-pulley/01-taper-lock-v-belt-pulley.jpg",
+            "assets/pulleys/taper-lock-pulley/02-taper-lock-v-belt-pulley.jpg"
+        ]
+    },
+    {
+        "title": "Rolling Mill Spur Gear",
+        "slug": "products/shafts/rolling-mill-spur-gear",
+        "description": "",
+        "material": "Alloy Steel",
+        "type": "Spur Gear",
+        "category": "Gears",
+        "categorySlug": "gears",
+        "images": [
+            "assets/gears/spur-gear/01-steel-large-spur-gear.jpg",
+            "assets/gears/spur-gear/02-steel-large-spur-gear.jpg"
+        ]
+    },
+    {
+        "title": "Ball Mill Gear",
+        "slug": "products/shafts/ball-mill-gear",
+        "description": "",
+        "material": "Alloy Steel",
+        "type": "Ball Mill Gear",
+        "category": "Gears",
+        "categorySlug": "gears",
+        "images": [
+            "assets/gears/ball-mill-gear/01-ball-mill-gear.jpg"
         ]
     }
 ]

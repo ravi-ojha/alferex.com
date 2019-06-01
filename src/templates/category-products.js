@@ -36,22 +36,15 @@ class AllProductsTemplate extends React.PureComponent {
     const { previous, next } = pageContext;
 
     console.log(pageContext.allProducts);
+    let categoryTitle = 'Products';
 
-    const pulleyList = pageContext.allProducts.filter((product) => {
-      if (product.node.categorySlug === 'pulleys') {
+    const categoryProductList = pageContext.allProducts.filter((product) => {
+      if (product.node.categorySlug === pageContext.categorySlug) {
+        categoryTitle = product.node.category;
         return product;
       }
     });
-    const renderedPulleyList = pulleyList.map((product) => {
-      return this.productCard(product);
-    });
-
-    const shaftList = pageContext.allProducts.filter((product) => {
-      if (product.node.categorySlug === 'gears') {
-        return this.productCard(product);
-      }
-    });
-    const renderedShaftList = shaftList.map((product) => {
+    const renderedCategoryProductList = categoryProductList.map((product) => {
       return this.productCard(product);
     });
 
@@ -64,7 +57,9 @@ class AllProductsTemplate extends React.PureComponent {
               <Breadcrumb size="large">
                 <Breadcrumb.Section link><Link to="/">Home</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
-                <Breadcrumb.Section active>Products</Breadcrumb.Section>
+                <Breadcrumb.Section link><Link to="/products">Products</Link></Breadcrumb.Section>
+                <Breadcrumb.Divider icon="right chevron" />
+                <Breadcrumb.Section active>{categoryTitle}</Breadcrumb.Section>
               </Breadcrumb>
             </Segment>
             <Segment basic>
@@ -73,21 +68,11 @@ class AllProductsTemplate extends React.PureComponent {
               </Header>
               <Segment basic style={{ padding: '5em 0' }}>
                 <Header as="h3" dividing className="alferex-product-header">
-                  Pulleys
+                  {categoryTitle}
                 </Header>
                 <Container>
                   <Grid stackable columns={3}>
-                    {renderedPulleyList}
-                  </Grid>
-                </Container>
-              </Segment>
-              <Segment basic style={{ padding: '5em 0' }}>
-                <Header as="h3" dividing className="alferex-product-header">
-                  Gears
-                </Header>
-                <Container>
-                  <Grid stackable columns={3}>
-                    {renderedShaftList}
+                    {renderedCategoryProductList}
                   </Grid>
                 </Container>
               </Segment>

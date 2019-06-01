@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import { Link, withPrefix } from 'gatsby';
 import {
-  Layout, Menu, Icon, Popover, Row, Col,
+  Layout, Menu, Icon, Popover, Dropdown,
 } from 'antd';
 
 import {
@@ -76,13 +76,32 @@ class Header extends React.PureComponent {
       activeMenuItem = 'home';
     }
 
+    const productDropdown = (
+      <Menu>
+        <Menu.Item key="0">
+          <Link to="/products/pulleys">Pulleys</Link>
+        </Menu.Item>
+        <Menu.Item key="1">
+          <Link to="/products/gears">Gears</Link>
+        </Menu.Item>
+        <Menu.Divider />
+        <Menu.Item key="2">
+          <Link to="/products">All Products</Link>
+        </Menu.Item>
+      </Menu>
+    );
+
     const menu = (
       <Menu mode={menuMode} selectedKeys={[activeMenuItem]} id="nav" key="nav" style={{ float: menuMode === 'inline' ? 'none' : 'right', border: 'None', lineHeight: '64px', fontFamily: "'Overpass', 'Helvetica Neue', Arial, Helvetica, sans-serif" }}>
         <Menu.Item key="home" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="products" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
-          <Link to="/products">Products</Link>
+          <Dropdown overlay={productDropdown} trigger={['hover', 'click']}>
+            <Link to="/products">
+              Products <Icon type="down" />
+            </Link>
+          </Dropdown>
         </Menu.Item>
         <Menu.Item key="about-us" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
           <Link to="/about-us">About Us</Link>

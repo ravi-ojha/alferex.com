@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const productPost = path.resolve('./src/templates/product-post.js')
+    const categoryPage = path.resolve('./src/templates/category-products.js')
 
     resolve(
       graphql(
@@ -27,7 +28,8 @@ exports.createPages = ({ graphql, actions }) => {
                   description
                   material
                   type
-                  product
+                  category
+                  categorySlug
                   images
                   slug
                 }
@@ -48,6 +50,22 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             allProducts: result.data.allProductsJson.edges
           }
+        })
+
+        let categorySlugs = result.data.allProductsJson.edges.map((edge) => (edge.node.categorySlug));
+        categorySlugs = [...new Set(categorySlugs)];
+
+        console.log(categorySlugs);
+        _.each(categorySlugs, (categorySlug, index) => {
+
+          createPage({
+            path: `/products/${categorySlug}`,
+            component: categoryPage,
+            context: {
+              allProducts: result.data.allProductsJson.edges,
+              categorySlug: categorySlug,
+            },
+          })
         })
 
         // Create blog posts pages.

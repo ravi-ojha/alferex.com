@@ -51,6 +51,8 @@ class ProductPostTemplate extends React.PureComponent {
                 <Breadcrumb.Divider icon="right chevron" />
                 <Breadcrumb.Section link><Link to="/products">Products</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
+                <Breadcrumb.Section link><Link to={`/products/${product.categorySlug}`}>{product.category}</Link></Breadcrumb.Section>
+                <Breadcrumb.Divider icon="right chevron" />
                 <Breadcrumb.Section active>{product.title}</Breadcrumb.Section>
               </Breadcrumb>
             </Segment>
@@ -92,7 +94,7 @@ class ProductPostTemplate extends React.PureComponent {
                           <List.Item>
                             <List.Content>
                               <List.Header>Product</List.Header>
-                              {product.product}
+                              {product.category}
                             </List.Content>
                           </List.Item>
                         </List>
@@ -126,7 +128,8 @@ export const pageQuery = graphql`
       description
       material
       type
-      product
+      category
+      categorySlug
       images
     }
   }
