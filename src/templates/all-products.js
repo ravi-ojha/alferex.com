@@ -72,8 +72,8 @@ class AllProductsTemplate extends React.PureComponent {
                 Product Range
               </Header>
               <Segment basic style={{ padding: '5em 0' }}>
-                <Header as="h3" dividing className="alferex-product-header">
-                  Pulleys
+                <Header as="h3" className="alferex-product-header">
+                  <span>Pulleys</span>
                 </Header>
                 <Container>
                   <Grid stackable columns={3}>
@@ -82,8 +82,8 @@ class AllProductsTemplate extends React.PureComponent {
                 </Container>
               </Segment>
               <Segment basic style={{ padding: '5em 0' }}>
-                <Header as="h3" dividing className="alferex-product-header">
-                  Gears
+                <Header as="h3" className="alferex-product-header">
+                  <span>Gears</span>
                 </Header>
                 <Container>
                   <Grid stackable columns={3}>

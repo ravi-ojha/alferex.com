@@ -8,12 +8,12 @@
         "category": "Pulleys",
         "categorySlug": "pulleys",
         "images": [
-            "assets/pulleys/v-belt-pulley/01-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "assets/pulleys/v-belt-pulley/02-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "assets/pulleys/v-belt-pulley/03-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "assets/pulleys/v-belt-pulley/04-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "assets/pulleys/v-belt-pulley/05-steel-aluminum-cast-iron-v-belt-pulley.jpg",
-            "assets/pulleys/v-belt-pulley/06-steel-aluminum-cast-iron-v-belt-pulley.jpg"
+            "/assets/pulleys/v-belt-pulley/01-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "/assets/pulleys/v-belt-pulley/02-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "/assets/pulleys/v-belt-pulley/03-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "/assets/pulleys/v-belt-pulley/04-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "/assets/pulleys/v-belt-pulley/05-steel-aluminum-cast-iron-v-belt-pulley.jpg",
+            "/assets/pulleys/v-belt-pulley/06-steel-aluminum-cast-iron-v-belt-pulley.jpg"
         ]
     },
     {
@@ -25,10 +25,10 @@
         "category": "Pulleys",
         "categorySlug": "pulleys",
         "images": [
-            "assets/pulleys/timing-toothed-belt-pulley/01-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "assets/pulleys/timing-toothed-belt-pulley/02-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "assets/pulleys/timing-toothed-belt-pulley/03-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
-            "assets/pulleys/timing-toothed-belt-pulley/04-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg"
+            "/assets/pulleys/timing-toothed-belt-pulley/01-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "/assets/pulleys/timing-toothed-belt-pulley/02-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "/assets/pulleys/timing-toothed-belt-pulley/03-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg",
+            "/assets/pulleys/timing-toothed-belt-pulley/04-steel-aluminum-cast-iron-timing-toothed-belt-pulley.jpg"
         ]
     },
     {
@@ -40,7 +40,7 @@
         "category": "Pulleys",
         "categorySlug": "pulleys",
         "images": [
-            "assets/pulleys/multi-groove-straight-bore-pulley/01-multi-groove-straight-bore-v-belt-pulley.jpg"
+            "/assets/pulleys/multi-groove-straight-bore-pulley/01-multi-groove-straight-bore-v-belt-pulley.jpg"
         ]
     },
     {
@@ -52,7 +52,7 @@
         "category": "Pulleys",
         "categorySlug": "pulleys",
         "images": [
-            "assets/pulleys/split-v-belt-pulley/01-split-v-belt-pulley.jpg"
+            "/assets/pulleys/split-v-belt-pulley/01-split-v-belt-pulley.jpg"
         ]
     },
     {
@@ -64,8 +64,8 @@
         "category": "Pulleys",
         "categorySlug": "pulleys",
         "images": [
-            "assets/pulleys/taper-lock-pulley/01-taper-lock-v-belt-pulley.jpg",
-            "assets/pulleys/taper-lock-pulley/02-taper-lock-v-belt-pulley.jpg"
+            "/assets/pulleys/taper-lock-pulley/01-taper-lock-v-belt-pulley.jpg",
+            "/assets/pulleys/taper-lock-pulley/02-taper-lock-v-belt-pulley.jpg"
         ]
     },
     {
@@ -77,8 +77,8 @@
         "category": "Gears",
         "categorySlug": "gears",
         "images": [
-            "assets/gears/spur-gear/01-steel-large-spur-gear.jpg",
-            "assets/gears/spur-gear/02-steel-large-spur-gear.jpg"
+            "/assets/gears/spur-gear/01-steel-large-spur-gear.jpg",
+            "/assets/gears/spur-gear/02-steel-large-spur-gear.jpg"
         ]
     },
     {
@@ -90,7 +90,7 @@
         "category": "Gears",
         "categorySlug": "gears",
         "images": [
-            "assets/gears/ball-mill-gear/01-ball-mill-gear.jpg"
+            "/assets/gears/ball-mill-gear/01-ball-mill-gear.jpg"
         ]
     }
 ]
