@@ -39,8 +39,9 @@ class Clientele extends React.PureComponent { // eslint-disable-line react/prefe
               disableImagesLoaded={false} // default false
               reloadOnUpdate // default false
             >
-              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/adeshwar-moulds-pvt-ltd.jpg" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', marginTop: "14px" }} src="/assets/clientele/adeshwar-moulds-pvt-ltd.jpg" size="medium" /></Segment>
               <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/ambition-industry.png" size="medium" /></Segment>
+              <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/abc.png" size="medium" /></Segment>
               <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/macons.png" size="medium" /></Segment>
               <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/hindustan-dorr-oliver.jpeg" size="medium" /></Segment>
               <Segment className="carousel-segment" basic padded textAlign='center'><Image style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} src="/assets/clientele/dhara-engineering-works.jpg" size="medium" /></Segment>
