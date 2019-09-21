@@ -47,11 +47,11 @@ class ProductPostTemplate extends React.PureComponent {
           <Container>
             <Segment basic style={{ marginBottom: '0' }}>
               <Breadcrumb size="large">
-                <Breadcrumb.Section link><Link to="/">Home</Link></Breadcrumb.Section>
+                <Breadcrumb.Section><Link to="/">Home</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
-                <Breadcrumb.Section link><Link to="/products">Products</Link></Breadcrumb.Section>
+                <Breadcrumb.Section><Link to="/products">Products</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
-                <Breadcrumb.Section link><Link to={`/products/${product.categorySlug}`}>{product.category}</Link></Breadcrumb.Section>
+                <Breadcrumb.Section><Link to={`/products/${product.categorySlug}`}>{product.category}</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
                 <Breadcrumb.Section active>{product.title}</Breadcrumb.Section>
               </Breadcrumb>

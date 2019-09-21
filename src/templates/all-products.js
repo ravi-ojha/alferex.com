@@ -62,7 +62,7 @@ class AllProductsTemplate extends React.PureComponent {
           <Container>
             <Segment basic style={{ marginBottom: '0' }}>
               <Breadcrumb size="large">
-                <Breadcrumb.Section link><Link to="/">Home</Link></Breadcrumb.Section>
+                <Breadcrumb.Section><Link to="/">Home</Link></Breadcrumb.Section>
                 <Breadcrumb.Divider icon="right chevron" />
                 <Breadcrumb.Section active>Products</Breadcrumb.Section>
               </Breadcrumb>

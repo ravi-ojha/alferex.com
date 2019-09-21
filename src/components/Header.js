@@ -25,6 +25,20 @@ class Header extends React.PureComponent {
     };
   }
 
+  componentWillMount () {
+    const script = document.createElement("script");
+    script.id = 'tawk-script';
+    script.type = 'text/javascript';
+    script.async = true;
+    script.innerHTML = "var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date;!function(){var e=document.createElement('script'),t=document.getElementsByTagName('script')[0];e.async=!0,e.src='https://embed.tawk.to/5d868f659f6b7a4457e2eac9/default',e.charset='UTF-8',e.setAttribute('crossorigin','*'),t.parentNode.insertBefore(e,t)}();";
+
+    const tawkScriptTag = document.getElementById('tawk-script');
+    // Don't add script tag if it's already present
+    if (!tawkScriptTag) {
+      document.body.appendChild(script);
+    }
+  }
+
   componentDidMount() {
     enquireScreen((b) => {
       this.setState({ menuMode: b ? 'inline' : 'horizontal' });
@@ -98,7 +112,7 @@ class Header extends React.PureComponent {
         </Menu.Item>
         <Menu.Item key="products" style={{ borderBottom: 'None', fontSize: '1.2em' }}>
           <Dropdown overlay={productDropdown} trigger={['hover', 'click']}>
-            <Link to="/products">
+            <Link style={{ cursor: 'text' }} to="/products">
               Products <Icon type="down" />
             </Link>
           </Dropdown>
