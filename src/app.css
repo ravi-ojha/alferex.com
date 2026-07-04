@@ -1,0 +1,489 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Use class-based dark mode (equivalent to darkMode: 'selector' in v3) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth theme transitions — disabled until theme-ready class is added to <html> */
+html:not(.theme-ready) *,
+html:not(.theme-ready) *::before,
+html:not(.theme-ready) *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+html.theme-ready *,
+html.theme-ready *::before,
+html.theme-ready *::after {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.2s ease,
+    fill 0.25s ease,
+    stroke 0.25s ease,
+    box-shadow 0.25s ease,
+    backdrop-filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+@theme {
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-spaceblack: #020202;
+  --color-daylight: #fafaf9;
+
+  /* Sand */
+  --color-sand-50: #f3f2f2;
+  --color-sand-100: #e4e3e2;
+  --color-sand-200: #cbcac8;
+  --color-sand-300: #afaeab;
+  --color-sand-400: #94928f;
+  --color-sand-500: #7a7874;
+  --color-sand-600: #615f5c;
+  --color-sand-700: #494846;
+  --color-sand-800: #32312f;
+  --color-sand-900: #181716;
+  --color-sand-950: #0d0d0c;
+
+  /* Cement (dark mode) */
+  --color-cement-50: #f3f5f6;
+  --color-cement-100: #e5e9eb;
+  --color-cement-200: #cbd3d7;
+  --color-cement-300: #b1bdc3;
+  --color-cement-400: #9aaab2;
+  --color-cement-500: #7f939d;
+  --color-cement-600: #647882;
+  --color-cement-700: #49585f;
+  --color-cement-800: #313b40;
+  --color-cement-900: #181d20;
+  --color-cement-950: #0d1011;
+
+  /* Parrot */
+  --color-parrot-50: #f5faef;
+  --color-parrot-100: #e9f5dc;
+  --color-parrot-200: #d5ebbc;
+  --color-parrot-300: #bee199;
+  --color-parrot-400: #aad779;
+  --color-parrot-500: #94cd56;
+  --color-parrot-600: #78b536;
+  --color-parrot-700: #598628;
+  --color-parrot-800: #3c5b1b;
+  --color-parrot-900: #1d2b0d;
+  --color-parrot-950: #101807;
+
+  /* Forest */
+  --color-forest-100: #e2f3eb;
+  --color-forest-500: #4cb782;
+  --color-forest-700: #23794f;
+
+  /* Water */
+  --color-water-500: #45abf7;
+  --color-water-600: #1f98f5;
+
+  /* Brownpaper */
+  --color-brownpaper-50: #fbf9f3;
+  --color-brownpaper-200: #f2e9d4;
+  --color-brownpaper-500: #dfcb99;
+  --color-brownpaper-600: #d2b66f;
+  --color-brownpaper-700: #c4a045;
+  --color-brownpaper-800: #9f8032;
+
+  /* CBrand (CSS variable references) */
+  --color-cbrand-background: var(--brand-background);
+  --color-cbrand-card-background: var(--brand-card-background);
+  --color-cbrand-text: var(--brand-text);
+  --color-cbrand-accent: var(--brand-accent);
+
+  /* Fonts */
+  --font-sans: 'InterVariable', sans-serif;
+  --font-display: 'InterVariable', sans-serif;
+  --font-mono: 'GeistMonoVariable', monospace;
+
+  /* Font sizes */
+  --text-md: 0.938rem;
+  --text-md--line-height: 1.35rem;
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1rem;
+  --text-xss: 0.75rem;
+  --text-xss--line-height: 1rem;
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--bits-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--bits-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Custom font weight utilities with variation settings */
+@utility font-200 {
+  font-weight: 200;
+  font-variation-settings: 'wght' 200;
+}
+
+@utility font-300 {
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+}
+
+@utility font-400 {
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+}
+
+@utility font-500 {
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+}
+
+@utility font-600 {
+  font-weight: 600;
+  font-variation-settings: 'wght' 600;
+}
+
+@utility font-700 {
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+}
+
+@utility font-800 {
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+}
+
+@import './styles/common.css';
+
+/* Typography: prose-sand (light mode: sand, dark mode: cement) */
+.prose-sand {
+  --tw-prose-body: var(--color-sand-800);
+  --tw-prose-headings: var(--color-spaceblack);
+  --tw-prose-lead: var(--color-sand-600);
+  --tw-prose-links: var(--color-water-600);
+  --tw-prose-bold: var(--color-sand-900);
+  --tw-prose-counters: var(--color-sand-600);
+  --tw-prose-bullets: var(--color-sand-500);
+  --tw-prose-hr: var(--color-sand-300);
+  --tw-prose-quotes: var(--color-sand-800);
+  --tw-prose-quote-borders: var(--color-sand-300);
+  --tw-prose-captions: var(--color-sand-600);
+  --tw-prose-code: var(--color-sand-800);
+  --tw-prose-pre-code: var(--color-sand-800);
+  --tw-prose-pre-bg: var(--color-sand-100);
+  --tw-prose-th-borders: var(--color-sand-300);
+  --tw-prose-td-borders: var(--color-sand-200);
+}
+
+/* Dark mode for prose-sand */
+.dark .prose-sand {
+  --tw-prose-body: var(--color-cement-200);
+  --tw-prose-headings: var(--color-white);
+  --tw-prose-lead: var(--color-cement-400);
+  --tw-prose-links: var(--color-water-500);
+  --tw-prose-bold: var(--color-cement-100);
+  --tw-prose-counters: var(--color-cement-400);
+  --tw-prose-bullets: var(--color-cement-500);
+  --tw-prose-hr: var(--color-cement-700);
+  --tw-prose-quotes: var(--color-cement-200);
+  --tw-prose-quote-borders: var(--color-cement-700);
+  --tw-prose-captions: var(--color-cement-400);
+  --tw-prose-code: var(--color-cement-200);
+  --tw-prose-pre-code: var(--color-cement-200);
+  --tw-prose-pre-bg: var(--color-cement-800);
+  --tw-prose-th-borders: var(--color-cement-700);
+  --tw-prose-td-borders: var(--color-cement-800);
+}
+
+/* Typography: prose-helpcenter (uses brand CSS variables) */
+.prose-helpcenter {
+  --tw-prose-body: var(--brand-prose-body);
+  --tw-prose-headings: var(--brand-prose-headings);
+  --tw-prose-lead: var(--brand-prose-lead);
+  --tw-prose-links: var(--brand-prose-links);
+  --tw-prose-bold: var(--brand-prose-bold);
+  --tw-prose-counters: var(--brand-prose-counters);
+  --tw-prose-bullets: var(--brand-prose-bullets);
+  --tw-prose-hr: var(--brand-prose-hr);
+  --tw-prose-quotes: var(--brand-prose-quotes);
+  --tw-prose-quote-borders: var(--brand-prose-quote-borders);
+  --tw-prose-captions: var(--brand-prose-captions);
+  --tw-prose-code: var(--brand-prose-code);
+  --tw-prose-pre-code: var(--brand-prose-pre-code);
+  --tw-prose-pre-bg: var(--brand-prose-pre-bg);
+  --tw-prose-th-borders: var(--brand-prose-th-borders);
+  --tw-prose-td-borders: var(--brand-prose-td-borders);
+  --tw-prose-invert-body: var(--brand-prose-invert-body);
+  --tw-prose-invert-headings: var(--brand-prose-invert-headings);
+  --tw-prose-invert-lead: var(--brand-prose-invert-lead);
+  --tw-prose-invert-links: var(--brand-prose-invert-links);
+  --tw-prose-invert-bold: var(--brand-prose-invert-bold);
+  --tw-prose-invert-counters: var(--brand-prose-invert-counters);
+  --tw-prose-invert-bullets: var(--brand-prose-invert-bullets);
+  --tw-prose-invert-hr: var(--brand-prose-invert-hr);
+  --tw-prose-invert-quotes: var(--brand-prose-invert-quotes);
+  --tw-prose-invert-quote-borders: var(--brand-prose-invert-quote-borders);
+  --tw-prose-invert-captions: var(--brand-prose-invert-captions);
+  --tw-prose-invert-code: var(--brand-prose-invert-code);
+  --tw-prose-invert-pre-code: var(--brand-prose-invert-pre-code);
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: var(--brand-prose-invert-th-borders);
+  --tw-prose-invert-td-borders: var(--brand-prose-invert-td-borders);
+}
+
+/* ============================================
+   tailwindcss-animate utilities (for bits-ui)
+   ============================================ */
+
+/* Base enter/exit animations */
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
+      scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1))
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
+      scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1))
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+@utility animate-in {
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+}
+
+@utility animate-out {
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+}
+
+/* Fade utilities */
+@utility fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+
+@utility fade-in-100 {
+  --tw-enter-opacity: 1;
+}
+
+@utility fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+
+@utility fade-out-100 {
+  --tw-exit-opacity: 1;
+}
+
+/* Zoom utilities */
+@utility zoom-in-0 {
+  --tw-enter-scale: 0;
+}
+
+@utility zoom-in-50 {
+  --tw-enter-scale: 0.5;
+}
+
+@utility zoom-in-75 {
+  --tw-enter-scale: 0.75;
+}
+
+@utility zoom-in-90 {
+  --tw-enter-scale: 0.9;
+}
+
+@utility zoom-in-95 {
+  --tw-enter-scale: 0.95;
+}
+
+@utility zoom-in-100 {
+  --tw-enter-scale: 1;
+}
+
+@utility zoom-out-0 {
+  --tw-exit-scale: 0;
+}
+
+@utility zoom-out-50 {
+  --tw-exit-scale: 0.5;
+}
+
+@utility zoom-out-75 {
+  --tw-exit-scale: 0.75;
+}
+
+@utility zoom-out-90 {
+  --tw-exit-scale: 0.9;
+}
+
+@utility zoom-out-95 {
+  --tw-exit-scale: 0.95;
+}
+
+@utility zoom-out-100 {
+  --tw-exit-scale: 1;
+}
+
+/* Slide in utilities */
+@utility slide-in-from-top-0 {
+  --tw-enter-translate-y: 0;
+}
+
+@utility slide-in-from-top-1 {
+  --tw-enter-translate-y: -0.25rem;
+}
+
+@utility slide-in-from-top-2 {
+  --tw-enter-translate-y: -0.5rem;
+}
+
+@utility slide-in-from-top-4 {
+  --tw-enter-translate-y: -1rem;
+}
+
+@utility slide-in-from-bottom-0 {
+  --tw-enter-translate-y: 0;
+}
+
+@utility slide-in-from-bottom-1 {
+  --tw-enter-translate-y: 0.25rem;
+}
+
+@utility slide-in-from-bottom-2 {
+  --tw-enter-translate-y: 0.5rem;
+}
+
+@utility slide-in-from-bottom-4 {
+  --tw-enter-translate-y: 1rem;
+}
+
+@utility slide-in-from-left-0 {
+  --tw-enter-translate-x: 0;
+}
+
+@utility slide-in-from-left-1 {
+  --tw-enter-translate-x: -0.25rem;
+}
+
+@utility slide-in-from-left-2 {
+  --tw-enter-translate-x: -0.5rem;
+}
+
+@utility slide-in-from-left-4 {
+  --tw-enter-translate-x: -1rem;
+}
+
+@utility slide-in-from-right-0 {
+  --tw-enter-translate-x: 0;
+}
+
+@utility slide-in-from-right-1 {
+  --tw-enter-translate-x: 0.25rem;
+}
+
+@utility slide-in-from-right-2 {
+  --tw-enter-translate-x: 0.5rem;
+}
+
+@utility slide-in-from-right-4 {
+  --tw-enter-translate-x: 1rem;
+}
+
+/* Slide out utilities */
+@utility slide-out-to-top-0 {
+  --tw-exit-translate-y: 0;
+}
+
+@utility slide-out-to-top-1 {
+  --tw-exit-translate-y: -0.25rem;
+}
+
+@utility slide-out-to-top-2 {
+  --tw-exit-translate-y: -0.5rem;
+}
+
+@utility slide-out-to-top-4 {
+  --tw-exit-translate-y: -1rem;
+}
+
+@utility slide-out-to-bottom-0 {
+  --tw-exit-translate-y: 0;
+}
+
+@utility slide-out-to-bottom-1 {
+  --tw-exit-translate-y: 0.25rem;
+}
+
+@utility slide-out-to-bottom-2 {
+  --tw-exit-translate-y: 0.5rem;
+}
+
+@utility slide-out-to-bottom-4 {
+  --tw-exit-translate-y: 1rem;
+}
+
+@utility slide-out-to-left-0 {
+  --tw-exit-translate-x: 0;
+}
+
+@utility slide-out-to-left-1 {
+  --tw-exit-translate-x: -0.25rem;
+}
+
+@utility slide-out-to-left-2 {
+  --tw-exit-translate-x: -0.5rem;
+}
+
+@utility slide-out-to-left-4 {
+  --tw-exit-translate-x: -1rem;
+}
+
+@utility slide-out-to-right-0 {
+  --tw-exit-translate-x: 0;
+}
+
+@utility slide-out-to-right-1 {
+  --tw-exit-translate-x: 0.25rem;
+}
+
+@utility slide-out-to-right-2 {
+  --tw-exit-translate-x: 0.5rem;
+}
+
+@utility slide-out-to-right-4 {
+  --tw-exit-translate-x: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}

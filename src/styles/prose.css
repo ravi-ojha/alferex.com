@@ -1,0 +1,181 @@
+@reference "../app.css";
+
+abbr,
+.prose abbr {
+  @apply cursor-help underline underline-offset-2 decoration-1 decoration-cement-500;
+}
+
+.prose h1 {
+  @apply text-3xl {
+  }
+}
+
+.prose a {
+  @apply text-water-600 dark:text-water-500 {
+  }
+  @apply no-underline border-b border-cement-200 dark:border-cement-800 hover:border-water-600 {
+  }
+}
+
+.prose pre {
+  @apply rounded {
+  }
+}
+
+.prose tbody tr {
+  @apply border-b-0 {
+  }
+}
+
+.prose em {
+  @apply pr-0.5 {
+  }
+}
+
+.prose p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Syntax highlighting */
+.prose .shiki pre {
+  @apply grid m-0 p-0 leading-relaxed bg-white {
+  }
+  @apply selection:bg-blue-500 selection:text-white {
+  }
+}
+
+.prose .shiki code {
+  @apply grid p-0 py-4 bg-transparent w-full {
+  }
+}
+
+/* Inline <code> */
+.prose :not(pre) code {
+  @apply px-1 py-0.5 rounded {
+  }
+  @apply bg-cement-700 text-cement-300 font-mono {
+  }
+  @apply before:content-none after:content-none {
+  }
+}
+
+/* Diffs */
+.prose .shiki .line.ins,
+.prose .shiki .line.del {
+  @apply py-1 {
+  }
+}
+
+.prose .shiki .line.ins:not(.highlight) {
+  @apply bg-blue-50 {
+  }
+}
+.prose .shiki .line.ins:not(.highlight) span {
+  @apply text-blue-500 {
+  }
+}
+.prose .shiki .line.ins:not(.highlight):before {
+  content: '+';
+  @apply w-4 h-4 absolute block -ml-3 text-blue-500 {
+  }
+}
+
+.prose .shiki .line.del:not(.highlight) {
+  @apply bg-rose-50/50 {
+  }
+}
+.prose .shiki .line.del:not(.highlight) span {
+  @apply text-red-600 {
+  }
+}
+.prose .shiki .line.del:not(.highlight):before {
+  content: '-';
+  @apply w-4 h-4 absolute block -ml-3 text-red-600 {
+  }
+}
+
+.prose .shiki .line.ins.highlight:after,
+.prose .shiki .line.del.highlight:after {
+  @apply absolute left-3 top-[3px] h-full text-blue-500 font-semibold {
+  }
+}
+
+.prose .shiki .line.ins.highlight:after {
+  content: '+';
+}
+
+.prose .shiki .line.del.highlight:before {
+  content: '-';
+}
+
+/* Terminal code samples */
+.prose .frame:not(.frame-none) + .shiki pre {
+  @apply rounded-t-none {
+  }
+}
+
+.prose .frame-terminal + .shiki .line:not(.empty):before {
+  content: '$';
+  @apply text-md pr-4 text-cement-400 {
+  }
+}
+
+/* Line blurring */
+.prose .shiki.blur-lines pre:has(.line.highlight) .line:not(.highlight) {
+  @apply blur-[0.095rem] {
+  }
+  transition:
+    filter 0.35s,
+    opacity 0.35s;
+}
+
+.prose .shiki.blur-lines pre:has(.line.highlight):hover .line:not(.highlight) {
+  @apply blur-0 {
+  }
+}
+
+.prose .shiki .line {
+  @apply block px-6 {
+  }
+}
+
+.prose .shiki .line.highlight {
+  @apply bg-cement-100/75 py-1 w-full relative {
+  }
+}
+.prose .shiki .line.highlight:before {
+  content: '';
+  @apply absolute w-[3px] h-full bg-blue-500 left-0 top-0 {
+  }
+}
+
+/* Example cards */
+.prose .example-preview > div:first-child {
+  @apply flex justify-center py-10 bg-cement-100 rounded-t-md {
+  }
+}
+
+.prose .example-preview .shiki {
+  @apply py-4 rounded-t-none border-cement-100 {
+  }
+}
+
+.prose .example-preview code {
+  @apply w-full p-0 bg-transparent {
+  }
+}
+
+.animate-spin-fast {
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
